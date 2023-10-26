@@ -5,6 +5,7 @@ import { Button } from 'primereact/button';
 import { useEffect, useRef } from 'react';
 
 
+
 const FormLayoutDemo = () => {
     const ref_id = useRef(0);
     const refPuissanceAllemande = useRef(0);
@@ -30,8 +31,8 @@ const FormLayoutDemo = () => {
             })
             .catch((error) => console.log(error));
     }, []);
-    const [puissanceAllemande, setPuissanceAllemande] = useState('');
-    const [puissanceChinoise, setPuissanceChinoise] = useState('');
+    const [puissanceAllemande, setPuissanceAllemande] = useState('200');
+    const [puissanceChinoise, setPuissanceChinoise] = useState('100');
     const regex = /^\d+(\.\d+)?$/;
 
 
@@ -80,11 +81,11 @@ const FormLayoutDemo = () => {
                     <form key={key} onSubmit={handleSubmit}>
                         <div className="p-fluid formgrid grid">
                             <div className="field col-12 md:col-12">
-                                <label htmlFor="SiegeSocial">Puissance Allemande</label>
+                                <label htmlFor="PuissanceAllemande">Puissance Allemande</label>
                                 <InputText onChange={(e) => setPuissanceAllemande(e.target.value)} id="PuissanceAllemande" name="PuissanceAllemande" type="text" defaultValue={puissanceAllemande} />
                             </div>
                             <div className="field col-12 md:col-12">
-                                <label htmlFor="numeroTelephone">Puissance Chinoise</label>
+                                <label htmlFor="PuissanceChinoise">Puissance Chinoise</label>
                                 <InputText onChange={(e) => setPuissanceChinoise(e.target.value)} id="PuissanceChinoise" name="PuissanceChinoise" type="text" defaultValue={puissanceChinoise} />
                             </div>
                             <Button type="submit" label="Valider" icon="pi pi-check" />

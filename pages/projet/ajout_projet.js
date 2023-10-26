@@ -182,7 +182,7 @@ const cancelOptions = { icon: 'pi pi-fw pi-times', iconOnly: true, className: 'c
                     <h5>Ajouter Projet</h5>
                     <div className="p-fluid formgrid grid">
                         <div className="field col-12 md:col-6">
-                            <label htmlFor="firstname2">Titre</label>
+                            <label htmlFor="titre">Titre</label>
                             <InputText onChange={(e) => setTitre(e.target.value)} id="titre" name="titre" type="text" />
                         </div>
 
